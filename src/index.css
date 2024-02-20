@@ -1,0 +1,27 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100vw;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add your custom styles below this line */
