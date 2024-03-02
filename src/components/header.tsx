@@ -1,12 +1,19 @@
-import StyledNav from './nav';
+import Nav from './nav';
 import Main from './main';
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+  background-color: white;
+  width: 100vw;
+  border-radius: 0 0 0 20% / 0 0 0 10%;
+`;
 
 const Header = () => {
   return (
-    <header>
-      <StyledNav />
+    <StyledHeader>
+      <Nav />
       <Main />
-    </header>
+    </StyledHeader>
   );
 };
 

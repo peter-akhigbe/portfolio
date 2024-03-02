@@ -4,12 +4,12 @@ import hamburger from '../assets/hamburger.svg';
 const StyledNav = styled.nav`
   color: #6070ff;
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end;
   height: 48px;
+  padding: 20px;
 
   img {
     height: 24px;
-    margin-right: 1rem;
     width: 24px;
   }
 `;
