@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Button from './button';
 import JobDetails from './jobDetails';
 import Skill from './skill';
-import GitHub from '../assets/logos/github in button.svg';
-import SeeLiveIcon from '../assets/logos/see-live-icon.svg';
+import GithubInButton from '../assets/logos/githubInButton';
+import SeeLiveIcon from '../assets/logos/seeLiveIcon';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -145,13 +145,13 @@ const ProjectCard = (props: ProjectCardProps) => {
           </ul>
           <Button
             text="See Live"
-            logo={SeeLiveIcon}
+            icon={SeeLiveIcon}
             onClick={handleSeeLiveClick}
           />
           <Button
             isEnabled={false}
             text="See Source"
-            logo={GitHub}
+            icon={GithubInButton}
             onClick={handleSeeSourceClick}
           />
         </Popup>

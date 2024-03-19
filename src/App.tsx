@@ -1,4 +1,5 @@
 import About from './components/about';
+import ContactMe from './components/contactMe';
 import Header from './components/header';
 import Projects from './components/projects';
 import styled from 'styled-components';
@@ -31,7 +32,14 @@ const App = () => {
     <StyledDiv>
       <Header />
       <Projects />
-      <About />
+      <div
+        style={{
+          backgroundColor: 'white',
+          borderRadius: '0 20% 0 0 / 0 10% 0 0',
+        }}>
+        <About />
+        <ContactMe />
+      </div>
       {/* {isWideScreen ? <h1>A</h1> : <h1>B</h1>} */}
     </StyledDiv>
   );

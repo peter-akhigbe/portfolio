@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -42,17 +43,28 @@ const StyledButton = styled.button`
 
 interface ButtonProps {
   text: string;
-  logo?: string;
+  icon?: React.FC<{ color?: string }>;
   isEnabled?: boolean;
   onClick: () => void;
 }
 
-const Button = ({ text, logo, isEnabled = true, onClick }: ButtonProps) => {
+const Button = ({ text, icon, isEnabled = true, onClick }: ButtonProps) => {
+  const Icon = icon;
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <StyledButton onClick={onClick} disabled={!isEnabled}>
+    <StyledButton
+      onClick={onClick}
+      disabled={!isEnabled}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
       <div>
         <span>{text}</span>
-        {logo && <img src={logo} alt="logo" />}
+        {icon && (
+          <Icon
+            color={isHovered ? 'white' : isEnabled ? '#6070FF' : '#5e6c84'}
+          />
+        )}
       </div>
     </StyledButton>
   );

@@ -1,9 +1,14 @@
+import One from './assets/projects/one.svg';
+import Two from './assets/projects/two.svg';
+import Three from './assets/projects/three.svg';
+import Four from './assets/projects/four.svg';
+
 const projectsData = [
   {
     title: 'Project 1',
     shortDescription: 'This is a project description',
     longDescription: 'This is a long project description',
-    imgSrc: `https://s3-alpha-sig.figma.com/img/efb8/1a27/0ee55d428834f9c9a8b1f9f45bd8d0c8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EPOB34SCqOpweuHq08-SVSyoheml3FA~q7rr1dASSF-q~gHiGXbLnG-SSqc22ZbSmXIF8eOaNZV134epjcYIYztIBGk2ra5~oAPq-XVrcRcEMfgLRxsSnh1fk6oCVIqIDaO1l-~PvrneyNGXFUQbe7ExuVb6f2KCekvMG6q3leQUUdldRyitngeagGmkriHPRw1XsO2YoY9rnncRrowWW1rxSq4oaz5B9~q8YBYFvhI1mvdZXmMqiavyl9puqSv6Rn5S9tUhFrm-nd54ef1SGrSgIkxEItKD0pV2c-5LJpWU3MSEoOvnEKm91pHBaOZXfH7woraW2QQYRVvwcLBr8Q__`,
+    imgSrc: `${One}`,
     skills: ['React', 'TypeScript', 'Styled Components'],
     jobDetails: {
       client: 'Tonic',
@@ -16,7 +21,7 @@ const projectsData = [
     title: 'Threads Clone',
     shortDescription: 'This is a project description',
     longDescription: 'This is a long project description',
-    imgSrc: `https://s3-alpha-sig.figma.com/img/efb8/1a27/0ee55d428834f9c9a8b1f9f45bd8d0c8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EPOB34SCqOpweuHq08-SVSyoheml3FA~q7rr1dASSF-q~gHiGXbLnG-SSqc22ZbSmXIF8eOaNZV134epjcYIYztIBGk2ra5~oAPq-XVrcRcEMfgLRxsSnh1fk6oCVIqIDaO1l-~PvrneyNGXFUQbe7ExuVb6f2KCekvMG6q3leQUUdldRyitngeagGmkriHPRw1XsO2YoY9rnncRrowWW1rxSq4oaz5B9~q8YBYFvhI1mvdZXmMqiavyl9puqSv6Rn5S9tUhFrm-nd54ef1SGrSgIkxEItKD0pV2c-5LJpWU3MSEoOvnEKm91pHBaOZXfH7woraW2QQYRVvwcLBr8Q__`,
+    imgSrc: `${Two}`,
     skills: ['TypeScript', 'Next.js', 'Node.js'],
     jobDetails: {
       client: 'Personal',
@@ -28,12 +33,24 @@ const projectsData = [
     title: 'Budget App',
     shortDescription: 'This is a project description',
     longDescription: 'This is a long project description',
-    imgSrc: `https://s3-alpha-sig.figma.com/img/efb8/1a27/0ee55d428834f9c9a8b1f9f45bd8d0c8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EPOB34SCqOpweuHq08-SVSyoheml3FA~q7rr1dASSF-q~gHiGXbLnG-SSqc22ZbSmXIF8eOaNZV134epjcYIYztIBGk2ra5~oAPq-XVrcRcEMfgLRxsSnh1fk6oCVIqIDaO1l-~PvrneyNGXFUQbe7ExuVb6f2KCekvMG6q3leQUUdldRyitngeagGmkriHPRw1XsO2YoY9rnncRrowWW1rxSq4oaz5B9~q8YBYFvhI1mvdZXmMqiavyl9puqSv6Rn5S9tUhFrm-nd54ef1SGrSgIkxEItKD0pV2c-5LJpWU3MSEoOvnEKm91pHBaOZXfH7woraW2QQYRVvwcLBr8Q__`,
+    imgSrc: `${Three}`,
     skills: ['Ruby on Rails', 'PostgreSQL', 'JavaScript'],
     jobDetails: {
       client: 'Microverse',
       role: 'Full Stack',
       year: '2024',
+    },
+  },
+  {
+    title: 'E-commerce',
+    shortDescription: 'This is a project description',
+    longDescription: 'This is a long project description',
+    imgSrc: `${Four}`,
+    skills: ['React', 'Redux', 'Node.js'],
+    jobDetails: {
+      client: 'Tonic',
+      role: 'Frontend',
+      year: '2023',
     },
   },
 ];
