@@ -5,7 +5,8 @@ import Connect from './connect';
 const StyledMain = styled.main`
   background-image: url(${background});
   background-repeat: no-repeat;
-  background-size: 100vw 650px;
+  background-size: 100vw;
+  background-position: center;
   height: 700px;
 
   display: flex;
