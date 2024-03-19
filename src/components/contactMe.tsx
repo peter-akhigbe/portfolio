@@ -44,7 +44,7 @@ const ContactForm = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -52,7 +52,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
       const response = await fetch('https://formspree.io/f/mgebowlk', {
@@ -79,7 +79,7 @@ const ContactForm = () => {
   };
 
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm onSubmit={(e) => handleSubmit(e)}>
       <div>
         {/* <label htmlFor="name">Name:</label> */}
         <input
@@ -88,7 +88,7 @@ const ContactForm = () => {
           name="name"
           placeholder="Enter your name"
           value={formData.name}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e)}
           required
         />
       </div>
@@ -100,7 +100,7 @@ const ContactForm = () => {
           name="email"
           placeholder="Enter your email"
           value={formData.email}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e)}
           required
         />
       </div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
           name="message"
           placeholder="Write your message here"
           value={formData.message}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e)}
           required></textarea>
       </div>
       <button type="submit">Get in touch</button>

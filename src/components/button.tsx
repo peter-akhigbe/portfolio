@@ -41,16 +41,19 @@ const StyledButton = styled.button`
   }
 `;
 
+type IconProps = React.FC<{ color?: string }>;
+
 interface ButtonProps {
   text: string;
-  icon?: React.FC<{ color?: string }>;
+  icon?: any;
   isEnabled?: boolean;
   onClick: () => void;
 }
 
 const Button = ({ text, icon, isEnabled = true, onClick }: ButtonProps) => {
-  const Icon = icon;
   const [isHovered, setIsHovered] = useState(false);
+
+  const Icon: IconProps = icon;
 
   return (
     <StyledButton

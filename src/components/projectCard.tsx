@@ -68,7 +68,7 @@ interface ProjectCardProps {
 
 const ProjectCard = (props: ProjectCardProps) => {
   const [showPopup, setShowPopup] = useState(false);
-  const popupRef = useRef(null);
+  const popupRef = useRef<HTMLDivElement>(null);
 
   const {
     image,
