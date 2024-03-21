@@ -3,12 +3,12 @@ import background from '../assets/headerBg.svg';
 import Connect from './connect';
 
 const StyledMain = styled.main`
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  background-position: center;
-
   .content {
+    background-image: url(${background});
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
