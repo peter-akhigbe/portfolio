@@ -20,7 +20,7 @@ const StyledDiv = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(96, 112, 255, 0.8);
+    background: rgba(96, 112, 255, 0.9);
     backdrop-filter: blur(5px);
     z-index: 100;
     height: 100vh;

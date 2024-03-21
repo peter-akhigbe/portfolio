@@ -3,12 +3,12 @@ import background from '../assets/headerBg.svg';
 import Connect from './connect';
 
 const StyledMain = styled.main`
-  .content {
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-position: center;
+  background-image: url(${background}?v=${Date.now()});
+  background-size: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;

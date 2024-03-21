@@ -117,19 +117,19 @@ const ContactForm = () => {
 };
 
 const StyledDiv = styled.div`
-  .mainDiv {
-    background-color: #6070ff;
-    padding: 100px 10vw;
-    border-radius: 20% 0 0 0 / 10% 0 0 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-    background-image: url(${background});
-    background-repeat: no-repeat;
-    background-position: right center;
-  }
+  background-image: url(${background});
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: #6070ff;
+
+  padding: 100px 10vw;
+  border-radius: 20% 0 0 0 / 10% 0 0 0;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 
   .containerOne {
     h1,
@@ -142,18 +142,16 @@ const StyledDiv = styled.div`
 const ContactMe = () => {
   return (
     <StyledDiv id="contact">
-      <div className="mainDiv">
-        <div className="containerOne">
-          <h1>Contact Me</h1>
-          <p>
-            If you have an application you are interested in developing, a
-            feature that you need built or a project that needs coding. I’d love
-            to help with it!
-          </p>
-        </div>
-
-        <ContactForm />
+      <div className="containerOne">
+        <h1>Contact Me</h1>
+        <p>
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it!
+        </p>
       </div>
+
+      <ContactForm />
     </StyledDiv>
   );
 };
