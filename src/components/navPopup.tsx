@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  /* overlay menu styles */
   #menuBtn {
     display: block;
     cursor: pointer;

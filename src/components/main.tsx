@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from '../assets/header-shapes-mobile.svg';
+import background from '../assets/headerBg.svg';
 import Connect from './connect';
 
 const StyledMain = styled.main`
@@ -7,12 +7,6 @@ const StyledMain = styled.main`
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position: center;
-  padding: 200px 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   .content {
     display: flex;
@@ -20,7 +14,7 @@ const StyledMain = styled.main`
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 0 20px;
+    padding: 200px 20px;
 
     h1 {
       font: 700 40px 'Poppins', sans-serif;

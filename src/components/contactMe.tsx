@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import background from '../assets/contact-form-shapes-mobile.svg';
-// import Button from './button';
+import background from '../assets/contactBg.svg';
 
 const StyledForm = styled.form`
   display: flex;
@@ -66,7 +65,6 @@ const ContactForm = () => {
       });
       if (response.ok) {
         console.log('Form submitted successfully!');
-        // Optionally, reset the form fields after successful submission
         setFormData({
           name: '',
           email: '',
@@ -83,7 +81,6 @@ const ContactForm = () => {
   return (
     <StyledForm onSubmit={(e) => handleSubmit(e)}>
       <div>
-        {/* <label htmlFor="name">Name:</label> */}
         <input
           type="text"
           id="name"
@@ -95,7 +92,6 @@ const ContactForm = () => {
         />
       </div>
       <div>
-        {/* <label htmlFor="email">Email:</label> */}
         <input
           type="email"
           id="email"
@@ -107,7 +103,6 @@ const ContactForm = () => {
         />
       </div>
       <div>
-        {/* <label htmlFor="message">Message:</label> */}
         <textarea
           id="message"
           name="message"
