@@ -3,7 +3,7 @@ import background from '../assets/headerBg.svg';
 import Connect from './connect';
 
 const StyledMain = styled.main`
-  background-image: url(${background}?v=${Date.now()});
+  background-image: url(${background});
   background-size: 100vw;
   background-position: center;
   background-repeat: no-repeat;

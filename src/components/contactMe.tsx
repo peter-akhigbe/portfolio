@@ -117,19 +117,17 @@ const ContactForm = () => {
 };
 
 const StyledDiv = styled.div`
-  background-image: url(${background});
-  background-position: right center;
-  background-repeat: no-repeat;
   background-color: #6070ff;
-
   padding: 100px 10vw;
   border-radius: 20% 0 0 0 / 10% 0 0 0;
   color: white;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url(${background});
 
   .containerOne {
     h1,
