@@ -17,11 +17,13 @@ const StyledForm = styled.form`
 
   input {
     width: 100%;
+    height: 48px;
   }
 
   textarea {
     width: 100%;
     min-height: 100px;
+    height: 170px;
   }
 
   button {
@@ -131,7 +133,8 @@ const StyledDiv = styled.div`
   background-image: url(${background});
   background-repeat: no-repeat;
   background-position: right center;
-  height: 779px;
+  background-size: contain;
+  /* height: 779px; */
 
   .containerOne {
     h1,
@@ -154,6 +157,9 @@ const ContactMe = () => {
       </div>
 
       <ContactForm />
+      {/* the experiment below works */}
+      {/* which means the import is fine */}
+      {/* <img className="experiment" src={background} /> */}
     </StyledDiv>
   );
 };

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import projectsData from '../projectsData';
 import ProjectCard from './projectCard';
-import background from '../assets/contact-form-shapes-mobile.svg';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -29,7 +28,6 @@ const Projects = () => {
           />
         );
       })}
-      <img src={background} />'
     </StyledDiv>
   );
 };
