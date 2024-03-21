@@ -128,7 +128,7 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 50px;
-  /* background-image: url(${background}); */
+  background-image: url(${background});
   background-repeat: no-repeat;
   background-position: right center;
   height: 779px;
@@ -143,10 +143,7 @@ const StyledDiv = styled.div`
 
 const ContactMe = () => {
   return (
-    <StyledDiv
-      style={{
-        backgroundImage: `url(${background})`,
-      }}>
+    <StyledDiv>
       <div className="containerOne">
         <h1>Contact Me</h1>
         <p>
