@@ -23,6 +23,11 @@ const StyledSkillDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 10px 0;
+
+  .title {
+    font-size: 20px;
+    margin: 10px 0;
+  }
 `;
 
 interface SkillProps {
@@ -43,7 +48,7 @@ const Skill = ({ h3, list, display, setDisplay }: SkillProps) => {
   return (
     <div>
       <StyledSkillDiv onClick={handleClick}>
-        <h3>{h3}</h3>
+        <p className="title">{h3}</p>
         {display === h3 ? <p>&darr;</p> : <p>&rarr;</p>}
       </StyledSkillDiv>
       {display === h3 && (
@@ -65,7 +70,13 @@ const StyledDiv = styled.div`
   border-radius: 0 20% 0 0 / 0 10% 0 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
+
+  .containerOne {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const About = () => {
@@ -74,7 +85,7 @@ const About = () => {
     window.open('https://www.google.com/', '_blank');
   };
   return (
-    <StyledDiv>
+    <StyledDiv id="about">
       <div className="containerOne">
         <h2>About Me</h2>
         <p>

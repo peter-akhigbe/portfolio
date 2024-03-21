@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledDiv = styled.li`
+const StyledLi = styled.li`
   background-color: #ebebff;
   color: #6070ff;
   border-radius: 8px;
@@ -10,7 +10,7 @@ const StyledDiv = styled.li`
 `;
 
 const Skill = ({ skill }: { skill: string }) => {
-  return <StyledDiv>{skill}</StyledDiv>;
+  return <StyledLi>{skill}</StyledLi>;
 };
 
 export default Skill;

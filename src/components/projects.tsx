@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 
 const Projects = () => {
   return (
-    <StyledDiv>
+    <StyledDiv id="portfolio">
       {projectsData.map((project) => {
         return (
           <ProjectCard

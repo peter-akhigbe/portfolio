@@ -133,8 +133,6 @@ const StyledDiv = styled.div`
   background-image: url(${background});
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: contain;
-  /* height: 779px; */
 
   .containerOne {
     h1,
@@ -146,7 +144,7 @@ const StyledDiv = styled.div`
 
 const ContactMe = () => {
   return (
-    <StyledDiv>
+    <StyledDiv id="contact">
       <div className="containerOne">
         <h1>Contact Me</h1>
         <p>
@@ -157,9 +155,6 @@ const ContactMe = () => {
       </div>
 
       <ContactForm />
-      {/* the experiment below works */}
-      {/* which means the import is fine */}
-      {/* <img className="experiment" src={background} /> */}
     </StyledDiv>
   );
 };

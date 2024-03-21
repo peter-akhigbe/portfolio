@@ -7,7 +7,7 @@ const StyledMain = styled.main`
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position: center;
-  height: 700px;
+  padding: 200px 0;
 
   display: flex;
   flex-direction: column;
