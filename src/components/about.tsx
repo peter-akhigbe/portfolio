@@ -23,6 +23,7 @@ const StyledSkillDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 10px 0;
+  cursor: pointer;
 
   .title {
     font-size: 20px;

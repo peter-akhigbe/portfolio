@@ -12,7 +12,7 @@
   background-image: url('../assets/contactBg.svg');
 }
 
-.containerOne {
+#contact .containerOne {
   h1,
   p {
     text-align: center;

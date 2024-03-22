@@ -10,7 +10,7 @@ const Connect = () => {
         LET’S CONNECT
       </p>
 
-      <div className="logos">
+      <div style={{ cursor: 'pointer' }} className="logos">
         <img src={GitHub} alt="GitHub logo" />
         <img src={LinkedIn} alt="LinkedIn logo" />
         <img src={Medium} alt="Medium logo" />
