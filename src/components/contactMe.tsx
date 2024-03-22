@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import background from '../assets/contactBg.svg';
+// import background from '../assets/contactBg.svg';
+import './contactMe.css';
 
 const StyledForm = styled.form`
   display: flex;
@@ -116,30 +117,30 @@ const ContactForm = () => {
   );
 };
 
-const StyledDiv = styled.div`
-  background-color: #6070ff;
-  padding: 100px 10vw;
-  border-radius: 20% 0 0 0 / 10% 0 0 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-image: url(${background});
+// const StyledDiv = styled.div`
+//   background-color: #6070ff;
+//   padding: 100px 10vw;
+//   border-radius: 20% 0 0 0 / 10% 0 0 0;
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 50px;
+//   background-repeat: no-repeat;
+//   background-position: right center;
+//   background-image: url(${background});
 
-  .containerOne {
-    h1,
-    p {
-      text-align: center;
-    }
-  }
-`;
+//   .containerOne {
+//     h1,
+//     p {
+//       text-align: center;
+//     }
+//   }
+// `;
 
 const ContactMe = () => {
   return (
-    <StyledDiv id="contact">
+    <div id="contact">
       <div className="containerOne">
         <h1>Contact Me</h1>
         <p>
@@ -150,7 +151,7 @@ const ContactMe = () => {
       </div>
 
       <ContactForm />
-    </StyledDiv>
+    </div>
   );
 };
 

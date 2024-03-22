@@ -1,0 +1,20 @@
+#contact {
+  background-color: #6070ff;
+  padding: 100px 10vw;
+  border-radius: 20% 0 0 0 / 10% 0 0 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url('../assets/contactBg.svg');
+}
+
+.containerOne {
+  h1,
+  p {
+    text-align: center;
+  }
+}
