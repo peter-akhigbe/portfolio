@@ -1,8 +1,14 @@
 .mainContainer {
   background-image: url('../assets/headerBg.svg');
-  background-size: 100vw;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainContainer > .content {
@@ -11,16 +17,27 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 200px 20px;
+  padding: 0 20px;
 
   h1 {
     font: 700 40px 'Poppins', sans-serif;
     line-height: 52px;
     color: #172b4d;
+    margin-right: auto;
   }
 
   .connect,
   .logos {
     margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mainContainer {
+    background-image: url('../assets/desktopHeaderBg.svg');
+  }
+
+  .mainContainer > .content {
+    padding: 0 25vw;
   }
 }

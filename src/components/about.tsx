@@ -68,7 +68,7 @@ const Skill = ({ h3, list, display, setDisplay }: SkillProps) => {
 const StyledDiv = styled.div`
   padding: 100px 10vw;
   background-color: white;
-  border-radius: 0 20% 0 0 / 0 10% 0 0;
+  border-radius: 0 75px 0 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -77,6 +77,20 @@ const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 142px 10vw;
+    gap: 10vw;
+
+    .containerOne,
+    .containerTwo {
+      width: 35vw;
+    }
   }
 `;
 

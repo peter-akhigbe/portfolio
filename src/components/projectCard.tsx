@@ -7,19 +7,53 @@ import GithubInButton from '../assets/logos/githubInButton';
 import SeeLiveIcon from '../assets/logos/seeLiveIcon';
 
 const StyledDiv = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid #dfe1e6;
-  padding: 16px;
-  border-radius: 16px;
-  background-color: white;
-  width: 80vw;
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #dfe1e6;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: white;
+    width: 80vw;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
   img {
     border-radius: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 3vw;
+      height: 496px;
+      border-radius: 24px;
+      padding: 24px 2vw;
+      /* width: 70vw; */
+    }
+
+    img {
+      height: 98%;
+      max-width: 544px;
+      max-height: 448px;
+      border-radius: 8px;
+    }
+
+    .flip {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
   }
 `;
 
@@ -35,6 +69,11 @@ const Popup = styled.div`
   z-index: 100;
   width: 80%;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 700px;
 
   img {
     border-radius: 8px;
@@ -42,9 +81,9 @@ const Popup = styled.div`
   }
 
   .popup-close {
-    position: absolute;
-    top: 0;
-    right: 10px;
+    position: fixed;
+    /* top: 0; */
+    right: 20px;
     cursor: pointer;
     font-size: 30px;
     color: #67798e;
@@ -54,11 +93,11 @@ const Popup = styled.div`
 interface ProjectCardProps {
   image: string;
   title: string;
-  shortDescription: string;
-  longDescription: string;
+  description: string;
   skills: string[];
-  link: string;
+  link?: string;
   source: string;
+  index: number;
   jobDetails: {
     client: string;
     role: string;
@@ -70,16 +109,8 @@ const ProjectCard = (props: ProjectCardProps) => {
   const [showPopup, setShowPopup] = useState(false);
   const popupRef = useRef<HTMLDivElement>(null);
 
-  const {
-    image,
-    title,
-    shortDescription,
-    longDescription,
-    skills,
-    link,
-    source,
-    jobDetails,
-  } = props;
+  const { image, title, description, skills, link, index, source, jobDetails } =
+    props;
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -109,20 +140,28 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <StyledDiv>
-      <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <JobDetails
-        client={jobDetails.client}
-        role={jobDetails.role}
-        year={jobDetails.year}
-      />
-      <p>{shortDescription}</p>
-      <ul>
-        {skills.map((skill: string) => {
-          return <Skill key={skill} skill={skill} />;
-        })}
-      </ul>
-      <Button text="See Project" onClick={togglePopup} />
+      <div className={`container ${index % 2 === 0 ? null : 'flip'}`}>
+        <img src={image} alt={title} />
+
+        <div className="textContainer">
+          <div>
+            <h2>{title}</h2>
+            <JobDetails
+              client={jobDetails.client}
+              role={jobDetails.role}
+              year={jobDetails.year}
+            />
+          </div>
+
+          <p>{description}</p>
+          <ul>
+            {skills.map((skill: string) => {
+              return <Skill key={skill} skill={skill} />;
+            })}
+          </ul>
+          <Button text="See Project" onClick={togglePopup} />
+        </div>
+      </div>
 
       {showPopup && (
         <Popup ref={popupRef}>
@@ -130,30 +169,34 @@ const ProjectCard = (props: ProjectCardProps) => {
             &times;
           </span>
 
-          <h2>{title}</h2>
-          <JobDetails
-            client={jobDetails.client}
-            role={jobDetails.role}
-            year={jobDetails.year}
-          />
+          <div>
+            <h2>{title}</h2>
+            <JobDetails
+              client={jobDetails.client}
+              role={jobDetails.role}
+              year={jobDetails.year}
+            />
+          </div>
           <img src={image} alt={title} />
-          <p>{longDescription}</p>
+          <p>{description}</p>
           <ul>
             {skills.map((skill: string) => {
               return <Skill key={skill} skill={skill} />;
             })}
           </ul>
-          <Button
-            text="See Live"
-            icon={SeeLiveIcon}
-            onClick={handleSeeLiveClick}
-          />
-          <Button
-            isEnabled={false}
-            text="See Source"
-            icon={GithubInButton}
-            onClick={handleSeeSourceClick}
-          />
+          <div>
+            <Button
+              text="See Source"
+              icon={GithubInButton}
+              onClick={handleSeeSourceClick}
+            />
+            <Button
+              isEnabled={Boolean(link)}
+              text="See Live"
+              icon={SeeLiveIcon}
+              onClick={handleSeeLiveClick}
+            />
+          </div>
         </Popup>
       )}
     </StyledDiv>

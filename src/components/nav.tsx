@@ -15,10 +15,37 @@ const StyledNav = styled.nav`
     width: 24px;
     cursor: pointer;
   }
+
+  .desktopNavLinks {
+    display: flex;
+    margin: auto;
+    gap: 32px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+
+    a {
+      color: #344563;
+    }
+  }
 `;
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isWideScreen, setIsWideScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth > 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleOverflow = () => {
@@ -42,7 +69,21 @@ const Nav = () => {
 
   return (
     <StyledNav>
-      <img onClick={handleNavOpen} src={hamburger} alt="menu" />
+      {isWideScreen ? (
+        <ul className="desktopNavLinks">
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      ) : (
+        <img onClick={handleNavOpen} src={hamburger} alt="menu" />
+      )}
       {isOpen && <NavPopup handleNavClose={handleNavClose} />}
     </StyledNav>
   );

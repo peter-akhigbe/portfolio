@@ -13,6 +13,7 @@ const StyledButton = styled.button`
   background-color: white;
   width: fit-content;
   white-space: nowrap;
+  margin: 5px;
 
   div {
     display: flex;

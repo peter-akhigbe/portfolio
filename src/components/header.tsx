@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledHeader = styled.header`
   background-color: white;
   width: 100vw;
-  border-radius: 0 0 0 20% / 0 0 0 10%;
+  border-radius: 0 0 0 75px;
 `;
 
 const Header = () => {

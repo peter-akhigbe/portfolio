@@ -1,34 +1,5 @@
-// import styled from 'styled-components';
-// import background from '../assets/headerBg.svg';
 import Connect from './connect';
 import './main.css';
-
-// const StyledMain = styled.main`
-//   background-image: url(${background});
-//   background-size: 100vw;
-//   background-position: center;
-//   background-repeat: no-repeat;
-
-//   .content {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 10px;
-//     padding: 200px 20px;
-
-//     h1 {
-//       font: 700 40px 'Poppins', sans-serif;
-//       line-height: 52px;
-//       color: #172b4d;
-//     }
-
-//     .connect,
-//     .logos {
-//       margin-right: auto;
-//     }
-//   }
-// `;
 
 const Main = () => {
   return (

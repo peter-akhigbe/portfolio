@@ -13,18 +13,18 @@ const StyledDiv = styled.div`
 const Projects = () => {
   return (
     <StyledDiv id="portfolio">
-      {projectsData.map((project) => {
+      {projectsData.map((project, index) => {
         return (
           <ProjectCard
+            index={index}
             key={project.imgSrc}
             image={project.imgSrc}
             title={project.title}
             jobDetails={project.jobDetails}
-            shortDescription={project.shortDescription}
-            longDescription={project.longDescription}
+            description={project.description}
             skills={project.skills}
-            link="https://www.example.com"
-            source="https://www.example.com"
+            link={project.link}
+            source={project.source}
           />
         );
       })}

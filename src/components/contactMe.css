@@ -1,7 +1,7 @@
 #contact {
   background-color: #6070ff;
   padding: 100px 10vw;
-  border-radius: 20% 0 0 0 / 10% 0 0 0;
+  border-radius: 75px 0 0 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -16,5 +16,14 @@
   h1,
   p {
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #contact {
+    padding: 100px 30vw;
+    background-image: url('../assets/desktopContactBg.svg');
+    background-position: center;
+    height: 100vh;
   }
 }
