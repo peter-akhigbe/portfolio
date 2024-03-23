@@ -6,7 +6,7 @@ import NavPopup from './navPopup';
 const StyledNav = styled.nav`
   display: flex;
   justify-content: flex-end;
-  padding: 5px;
+  padding: 10px 20px;
   position: fixed;
   z-index: 20;
   background-color: white;
