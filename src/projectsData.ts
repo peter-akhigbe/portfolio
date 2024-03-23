@@ -1,7 +1,3 @@
-import One from './assets/projects/one.svg';
-// import Two from './assets/projects/two.svg';
-// import Three from './assets/projects/three.svg';
-// import Four from './assets/projects/four.svg';
 import budgetAppImage from './assets/projects/budgetApp.png';
 import mDocImage from './assets/projects/mDoc.png';
 import catalogOfMyThingsImage from './assets/projects/catalogOfMyThings.png';
