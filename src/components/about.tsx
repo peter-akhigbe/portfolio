@@ -107,10 +107,10 @@ const About = () => {
       <div className="containerOne">
         <h2>About Me</h2>
         <p>
-          Hello I’m a software developer! I can help you build a product ,
-          feature or website. Look through some of my work and experience! If
-          you like what you see and have a project you need coded, don’t
-          hesitate to contact me.
+          Experienced Full-Stack Developer with over 1-year of professional
+          experience. Specializing in React, Node.js, and Ruby on Rails. Proven
+          ability to transform business requirements into scalable and
+          maintainable software solutions in remote environments.
         </p>
         <Connect />
         <Button text="Get my resume" onClick={handleClick} />

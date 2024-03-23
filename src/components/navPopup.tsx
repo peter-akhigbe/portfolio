@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const slideIn = keyframes`
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`;
+
+const slideOut = keyframes`
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+`;
 
 const StyledDiv = styled.div`
   #menuBtn {
@@ -26,6 +44,9 @@ const StyledDiv = styled.div`
     height: 100vh;
     width: 100vw;
     transition: height 0.35s;
+
+    transform: translateY(-100%); /* Start the menu offscreen */
+    animation: ${slideIn} 0.3s forwards; /* Apply the slide-in animation */
   }
 
   #mobileNav .container {
@@ -53,6 +74,11 @@ const StyledDiv = styled.div`
     font-size: 2rem;
     font-weight: bold;
   }
+
+  /* Add hover effect to close button */
+  #closeBtn:hover {
+    color: #a4aabc; /* Change color on hover */
+  }
 `;
 
 interface NavPopupProps {
@@ -60,27 +86,36 @@ interface NavPopupProps {
 }
 
 const NavPopup = ({ handleNavClose }: NavPopupProps) => {
+  const handleClose = () => {
+    handleNavClose();
+    // Add logic to trigger slide-out animation when closing
+    const navMenu = document.getElementById('mobileNav');
+    if (navMenu) {
+      navMenu.style.animation = `${slideOut} 0.3s forwards`;
+    }
+  };
+
   return (
     <StyledDiv>
       <div id="mobileNav">
         <div className="container">
-          <span onClick={() => handleNavClose()} id="closeBtn">
+          <span onClick={handleClose} id="closeBtn">
             &times;
           </span>
           <nav>
             <ul className="mobileNavLinks">
               <li>
-                <a onClick={() => handleNavClose()} href="#portfolio">
+                <a onClick={handleClose} href="#portfolio">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a onClick={() => handleNavClose()} href="#about">
+                <a onClick={handleClose} href="#about">
                   About
                 </a>
               </li>
               <li>
-                <a onClick={() => handleNavClose()} href="#contact">
+                <a onClick={handleClose} href="#contact">
                   Contact
                 </a>
               </li>

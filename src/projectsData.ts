@@ -13,7 +13,7 @@ const projectsData = [
     link: 'https://react-capstone-emoji-website.onrender.com/',
     jobDetails: {
       client: 'Microverse',
-      role: 'Full-Stack',
+      role: 'Full Stack',
       year: '2023',
     },
   },
@@ -26,7 +26,7 @@ const projectsData = [
     link: 'https://budget-app-oemf.onrender.com',
     jobDetails: {
       client: 'Microverse',
-      role: 'Full-Stack',
+      role: 'Full Stack',
       year: '2023',
     },
   },
@@ -39,7 +39,7 @@ const projectsData = [
     link: 'https://capstone-m-doc.onrender.com/',
     jobDetails: {
       client: 'Microverse',
-      role: 'Full-Stack',
+      role: 'Full Stack',
       year: '2024',
     },
   },

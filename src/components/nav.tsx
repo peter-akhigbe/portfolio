@@ -4,11 +4,13 @@ import hamburger from '../assets/hamburger.svg';
 import NavPopup from './navPopup';
 
 const StyledNav = styled.nav`
-  color: #6070ff;
   display: flex;
   justify-content: flex-end;
-  height: 48px;
-  padding: 20px;
+  padding: 5px;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  width: 100vw;
 
   img {
     height: 24px;
@@ -23,10 +25,6 @@ const StyledNav = styled.nav`
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
-
-    a {
-      color: #344563;
-    }
   }
 `;
 

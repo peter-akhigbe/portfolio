@@ -5,12 +5,15 @@ const Main = () => {
   return (
     <div className="mainContainer">
       <div className="content">
-        <h1>I’m Peter. Glad to see you!</h1>
+        <h1>Hey there, I'm Peter! 👋</h1>
         <p>
-          I’m a software developer! I can help you build a product , feature or
-          website Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don’t hesitate to contact
-          me.
+          As a seasoned software developer, I'm passionate about crafting
+          digital solutions that make an impact. With a blend of creativity and
+          technical expertise, I specialize in building products, features, and
+          websites that exceed expectations. Take a peek at some of my work and
+          experience below. If you're intrigued by what you see and have a
+          project in mind, I'm just a message away. Let's collaborate and bring
+          your ideas to life!
         </p>
         <Connect />
       </div>

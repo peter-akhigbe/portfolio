@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-// import background from '../assets/contactBg.svg';
 import './contactMe.css';
 
 const StyledForm = styled.form`

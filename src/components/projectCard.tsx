@@ -28,6 +28,12 @@ const StyledDiv = styled.div`
 
   img {
     border-radius: 8px;
+    transition: 1s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    z-index: 2;
   }
 
   @media only screen and (min-width: 768px) {
@@ -59,18 +65,18 @@ const Popup = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  width: 80%;
+  width: 90vw;
+  max-height: 90vh;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   overflow-y: auto;
-  max-height: 700px;
 
   img {
     border-radius: 8px;
@@ -78,12 +84,21 @@ const Popup = styled.div`
   }
 
   .popup-close {
-    position: fixed;
-    /* top: 0; */
-    right: 20px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    left: 90%;
+    border: 1px solid #67798e;
     cursor: pointer;
     font-size: 30px;
     color: #67798e;
+    z-index: 101;
+    margin-bottom: -50px;
+    background-color: #e8ecf0;
   }
 `;
 
@@ -122,6 +137,14 @@ const ProjectCard = (props: ProjectCardProps) => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = showPopup ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [showPopup]);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -165,7 +188,6 @@ const ProjectCard = (props: ProjectCardProps) => {
           <span className="popup-close" onClick={togglePopup}>
             &times;
           </span>
-
           <div>
             <h2>{title}</h2>
             <JobDetails
