@@ -10,10 +10,12 @@ const Main = () => {
           As a seasoned software developer, I'm passionate about crafting
           digital solutions that make an impact. With a blend of creativity and
           technical expertise, I specialize in building products, features, and
-          websites that exceed expectations. Take a peek at some of my work and
-          experience below. If you're intrigued by what you see and have a
-          project in mind, I'm just a message away. Let's collaborate and bring
-          your ideas to life!
+          websites that exceed expectations.
+        </p>
+        <p>
+          Take a peek at some of my work and experience below. If you're
+          intrigued by what you see and have a project in mind, I'm just a
+          message away. Let's collaborate and bring your ideas to life!
         </p>
         <Connect />
       </div>
