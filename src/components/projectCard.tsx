@@ -37,16 +37,13 @@ const StyledDiv = styled.div`
       justify-content: flex-start;
       align-items: flex-start;
       gap: 3vw;
-      height: 496px;
       border-radius: 24px;
       padding: 24px 2vw;
-      /* width: 70vw; */
     }
 
     img {
-      height: 98%;
-      max-width: 544px;
-      max-height: 448px;
+      width: 50%;
+      height: auto;
       border-radius: 8px;
     }
 
