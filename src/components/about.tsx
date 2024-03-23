@@ -97,7 +97,10 @@ const StyledDiv = styled.div`
 const About = () => {
   const [display, setDisplay] = useState<string | null>(null);
   const handleClick = () => {
-    window.open('https://www.google.com/', '_blank');
+    window.open(
+      'https://drive.google.com/file/d/19F0qOuk6xxHbzpGpeLymklDlDi8eUksK',
+      '_blank',
+    );
   };
   return (
     <StyledDiv id="about">
