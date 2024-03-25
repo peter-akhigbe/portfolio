@@ -98,7 +98,7 @@ const About = () => {
   const [display, setDisplay] = useState<string | null>(null);
   const handleClick = () => {
     window.open(
-      'https://drive.google.com/file/d/19F0qOuk6xxHbzpGpeLymklDlDi8eUksK',
+      'https://docs.google.com/document/d/1DTyx-PLSL5BzOLnkDws85NF1EBbBS6DXMyICWriehSI/',
       '_blank',
     );
   };
